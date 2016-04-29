@@ -5,12 +5,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <!-- fx:controller="com.neuronrobotics.bowlerstudio.MainController"-->
-<VBox maxHeight="1.7976931348623157E308"
- maxWidth="1.7976931348623157E308"
-  prefHeight="685.0" 
-  prefWidth="1127.0000999999975"
-   xmlns:fx="http://javafx.com/fxml/1" 
-   xmlns="http://javafx.com/javafx/2.2">
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="685.0" prefWidth="1127.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
     <MenuBar fx:id="BowlerStudioMenue" minHeight="-Infinity">
       <menus>
@@ -80,7 +76,7 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.8250444049733571" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1411.0" VBox.vgrow="ALWAYS">
+    <SplitPane fx:id="CadTextSplit" dividerPositions="0.6367673179396093" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1411.0" VBox.vgrow="ALWAYS">
       <items>
         <SplitPane dividerPositions="0.726027397260274, 0.9269406392694064" focusTraversable="true" orientation="VERTICAL" prefHeight="659.0" prefWidth="766.0">
           <items>
@@ -92,28 +88,56 @@
             </AnchorPane>
             <AnchorPane fx:id="logView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="42.0" prefWidth="924.0">
               <children>
-                <Accordion expandedPane="$null" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                  <panes>
-
-                    <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="false" text="Command Line">
+                <Accordion AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <expandedPane>
+                    <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="true" text="Command Line">
                       <content>
                         <AnchorPane id="Content" fx:id="CommandLine" minHeight="20.0" minWidth="0.0" prefHeight="57.0" prefWidth="920.0" />
                       </content>
                     </TitledPane>
+                  </expandedPane>
+                  <panes>
+                    <fx:reference source="commandLineTitledPane" />
                   </panes>
                 </Accordion>
               </children>
             </AnchorPane>
           </items>
         </SplitPane>
-        <BorderPane prefHeight="200.0" prefWidth="200.0">
-          <bottom>
-            <AnchorPane fx:id="jfx3dControls" prefHeight="57.0" prefWidth="239.0" />
-          </bottom>
-          <center>
-            <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="239.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(92,92,92,0.9) 0%,        rgba(32,32,32,0.9) 100%);" />
-          </center>
-        </BorderPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <StackPane prefHeight="660.0" prefWidth="382.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="477.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(98,98,98,0.9) 0%,        rgba(72,72,72,0.9) 100%);" />
+                <BorderPane pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                  <bottom>
+                    <AnchorPane fx:id="jfx3dControls" opacity="0.7" pickOnBounds="false" prefHeight="57.0" prefWidth="239.0" />
+                  </bottom>
+                  <left>
+                    <ScrollPane fx:id="overlayScrollPanel" blendMode="OVERLAY" content="$null" fitToHeight="true" fitToWidth="true" hbarPolicy="AS_NEEDED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" opacity="0.9" pannable="false" prefHeight="-1.0" prefWidth="-1.0" visible="false" BorderPane.alignment="TOP_LEFT" />
+                  </left>
+                  <right>
+                    <BorderPane minWidth="299.0" pickOnBounds="false" prefHeight="557.0" prefWidth="299.0" BorderPane.alignment="TOP_RIGHT">
+                      <bottom>
+                        <AnchorPane fx:id="TempControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_RIGHT" />
+                      </bottom>
+                      <top>
+                        <AnchorPane fx:id="DriveControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT" />
+                      </top>
+                    </BorderPane>
+                  </right>
+                  <top>
+                    <AnchorPane fx:id="CadControlsAnchor" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
+                      <BorderPane.margin>
+                        <Insets />
+                      </BorderPane.margin>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </children>
+            </StackPane>
+          </children>
+        </AnchorPane>
       </items>
     </SplitPane>
   </children>
