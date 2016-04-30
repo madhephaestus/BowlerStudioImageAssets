@@ -90,7 +90,7 @@
                       <children>
                         <Accordion prefHeight="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <expandedPane>
-                            <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="true" minWidth="712.0" prefHeight="43.0" prefWidth="712.0" text="Command Line">
+                            <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="true" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" text="Command Line">
                               <content>
                                 <AnchorPane id="Content" fx:id="CommandLine" minHeight="-1.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" />
                               </content>
