@@ -78,28 +78,32 @@
     </MenuBar>
     <SplitPane fx:id="CadTextSplit" dividerPositions="0.6367673179396093" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1411.0" VBox.vgrow="ALWAYS">
       <items>
-        <SplitPane dividerPositions="0.726027397260274, 0.9269406392694064" focusTraversable="true" orientation="VERTICAL" prefHeight="659.0" prefWidth="766.0">
+        <SplitPane dividerPositions="0.771689497716895" focusTraversable="true" orientation="VERTICAL" prefHeight="659.0" prefWidth="766.0">
           <items>
             <AnchorPane fx:id="editorContainer" prefHeight="771.0" prefWidth="944.0" />
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
               <children>
-                <TextArea fx:id="logViewRef" prefHeight="17.0" prefWidth="914.0" text="" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-              </children>
-            </AnchorPane>
-            <AnchorPane fx:id="logView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="42.0" prefWidth="924.0">
-              <children>
-                <Accordion AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                  <expandedPane>
-                    <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="true" text="Command Line">
-                      <content>
-                        <AnchorPane id="Content" fx:id="CommandLine" minHeight="20.0" minWidth="0.0" prefHeight="57.0" prefWidth="920.0" />
-                      </content>
-                    </TitledPane>
-                  </expandedPane>
-                  <panes>
-                    <fx:reference source="commandLineTitledPane" />
-                  </panes>
-                </Accordion>
+                <VBox maxWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <TextArea fx:id="logViewRef" prefHeight="-1.0" prefWidth="-1.0" text="" wrapText="true" VBox.vgrow="ALWAYS" />
+                    <AnchorPane fx:id="logView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="54.0" prefWidth="714.0">
+                      <children>
+                        <Accordion AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <expandedPane>
+                            <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="true" text="Command Line">
+                              <content>
+                                <AnchorPane id="Content" fx:id="CommandLine" minHeight="20.0" minWidth="0.0" prefHeight="57.0" prefWidth="920.0" />
+                              </content>
+                            </TitledPane>
+                          </expandedPane>
+                          <panes>
+                            <fx:reference source="commandLineTitledPane" />
+                          </panes>
+                        </Accordion>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                </VBox>
               </children>
             </AnchorPane>
           </items>
