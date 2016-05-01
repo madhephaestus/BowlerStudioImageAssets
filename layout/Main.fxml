@@ -88,16 +88,13 @@
                     <TextArea fx:id="logViewRef" prefHeight="-1.0" prefWidth="-1.0" text="" wrapText="true" VBox.vgrow="ALWAYS" />
                     <AnchorPane fx:id="logView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
                       <children>
-                        <Accordion prefHeight="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <expandedPane>
-                            <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="true" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" text="Command Line">
+                        <Accordion expandedPane="$null" prefHeight="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <panes>
+                            <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="false" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" text="Command Line">
                               <content>
                                 <AnchorPane id="Content" fx:id="CommandLine" minHeight="-1.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" />
                               </content>
                             </TitledPane>
-                          </expandedPane>
-                          <panes>
-                            <fx:reference source="commandLineTitledPane" />
                           </panes>
                         </Accordion>
                       </children>
