@@ -74,9 +74,9 @@
             <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="BowlerStudio" >
+        <Menu mnemonicParsing="false" text="BowlerStudio">
           <items>
-           <!--  <MenuItem mnemonicParsing="false" onAction="#onSaveConfiguration" text="Save Configuration" />-->
+            <!--  <MenuItem mnemonicParsing="false" onAction="#onSaveConfiguration" text="Save Configuration" />-->
           </items>
         </Menu>
       </menus>
@@ -112,18 +112,18 @@
         </SplitPane>
         <AnchorPane prefHeight="200.0" prefWidth="200.0">
           <children>
-            <StackPane prefHeight="660.0" prefWidth="382.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <StackPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
-                <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="477.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(155,155,255,0.9) 0%,        rgba(100,100,100,0.9) 100%);" />
-                <BorderPane pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(155,155,255,0.9) 0%,        rgba(100,100,100,0.9) 100%);" />
+                <BorderPane pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
                   <bottom>
-                    <AnchorPane fx:id="jfx3dControls" opacity="0.7" pickOnBounds="false" prefHeight="57.0" prefWidth="239.0" />
+                    <AnchorPane fx:id="jfx3dControls" opacity="0.7" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" />
                   </bottom>
                   <left>
                     <ScrollPane fx:id="overlayScrollPanel" blendMode="OVERLAY" content="$null" fitToHeight="true" fitToWidth="true" hbarPolicy="AS_NEEDED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" opacity="0.9" pannable="false" prefHeight="-1.0" prefWidth="-1.0" visible="false" BorderPane.alignment="TOP_LEFT" />
                   </left>
                   <right>
-                    <BorderPane minWidth="299.0" pickOnBounds="false" prefHeight="557.0" prefWidth="299.0" BorderPane.alignment="TOP_RIGHT">
+                    <BorderPane minWidth="-1.0" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT">
                       <bottom>
                         <AnchorPane fx:id="TempControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_RIGHT" />
                       </bottom>
