@@ -74,7 +74,7 @@
             <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="BowlerStudio" fx:id="BowlerStudioMenu">
+        <Menu mnemonicParsing="false" text="BowlerStudio" >
           <items>
             <MenuItem mnemonicParsing="false" onAction="#onSaveConfiguration" text="Save Configuration" />
           </items>
