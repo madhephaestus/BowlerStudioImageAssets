@@ -76,7 +76,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="BowlerStudio" >
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#onSaveConfiguration" text="Save Configuration" />
+           <!--  <MenuItem mnemonicParsing="false" onAction="#onSaveConfiguration" text="Save Configuration" />-->
           </items>
         </Menu>
       </menus>
