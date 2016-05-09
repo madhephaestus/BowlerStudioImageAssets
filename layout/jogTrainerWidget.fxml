@@ -2,7 +2,50 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" />
+<GridPane fx:id="xval" prefWidth="359.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ImageView fx:id="xplus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+    <ImageView fx:id="yplus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+    <ImageView fx:id="zplus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+    <ImageView fx:id="rotzPlus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+    <ImageView fx:id="linkPlus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+    <ImageView fx:id="xminus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+    <ImageView fx:id="yminus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+    <ImageView fx:id="zminus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+    <ImageView fx:id="rotzMinus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+    <ImageView fx:id="linkMinus" fitHeight="26.499999595725008" fitWidth="35.33333206176758" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+      <GridPane.margin>
+        <Insets />
+      </GridPane.margin>
+    </ImageView>
+    <Button mnemonicParsing="false" onAction="#configure" text="Set Configuration" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+    <TextField fx:id="xval" prefWidth="221.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <GridPane.margin>
+        <Insets left="5.0" right="5.0" fx:id="x1" />
+      </GridPane.margin>
+    </TextField>
+    <TextField fx:id="yval" prefWidth="200.0" GridPane.columnIndex="2" GridPane.margin="$x1" GridPane.rowIndex="1" />
+    <TextField fx:id="zval" prefWidth="200.0" GridPane.columnIndex="2" GridPane.margin="$x1" GridPane.rowIndex="2" />
+    <TextField fx:id="rzval" prefWidth="200.0" GridPane.columnIndex="2" GridPane.margin="$x1" GridPane.rowIndex="3" />
+    <TextField fx:id="linkval" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="60.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="64.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="235.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
