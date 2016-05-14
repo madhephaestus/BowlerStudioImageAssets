@@ -53,7 +53,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="GCODE">
               <items>
-                <MenuItem mnemonicParsing="false" text="Marlin GCODE" />
+                <MenuItem mnemonicParsing="false" text="Marlin GCODE" fx:id="addMarlinGCODEDevice" />
               </items>
             </Menu>
           </items>
