@@ -51,6 +51,11 @@
             <Menu mnemonicParsing="false" text="Game Controller">
               <MenuItem mnemonicParsing="false" onAction="#onConnectGamePad" text="GamePad JInput " />
             </Menu>
+            <Menu mnemonicParsing="false" text="GCODE">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Marlin GCODE" />
+              </items>
+            </Menu>
           </items>
         </Menu>
         <!--  
