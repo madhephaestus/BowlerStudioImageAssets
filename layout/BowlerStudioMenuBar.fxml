@@ -91,6 +91,12 @@
             <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
           </items>
         </Menu>
+        <Menu mnemonicParsing="false" text="Window">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Show Devices" fx:id="showDevicesPanel" />
+            <MenuItem mnemonicParsing="false" text="Show Creature Lab" fx:id="showCreatureLab" />
+          </items>
+        </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
             <MenuItem mnemonicParsing="false" text="About" />
