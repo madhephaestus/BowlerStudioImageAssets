@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<!-- fx:controller="com.neuronrobotics.bowlerstudio.MainController"-->
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <top>
+    <MenuBar BorderPane.alignment="CENTER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#onLoadFile" text="Load File" />
+            <MenuItem mnemonicParsing="false" onAction="#onPrint" text="Print..." />
+            <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Add Device">
+          <items>
+            <Menu mnemonicParsing="false" text="Bowler Device">
+              <MenuItem mnemonicParsing="false" onAction="#onConnect" text="Bowler Device using Connection Dialog" />
+              <MenuItem mnemonicParsing="false" onAction="#onConnectVirtual" text="Virtual PID Device" />
+              <MenuItem mnemonicParsing="false" onAction="#onConnectPidSim" text="Virtual Torque Controller" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Creatures" fx:id="CreaturesMenu">
+              <!-- 
+              <MenuItem mnemonicParsing="false" onAction="#onRobotArm" text="Robot Arm" />
+                    <MenuItem mnemonicParsing="false" onAction="#onHexapod" text="Six Leg Walker" />
+                    <MenuItem mnemonicParsing="false" onAction="#onHumanoid" text="Humanoid" />
+                    <MenuItem mnemonicParsing="false" onAction="#onGrasshopper" text="Grasshopper" />
+                    <MenuItem mnemonicParsing="false" onAction="#onInputArm" text="Input Arm" />
+                    <MenuItem mnemonicParsing="false" onAction="#onAddElephant" text="Elephant" />
+                    <MenuItem mnemonicParsing="false" onAction="#onAddCNC" text="CNC Controller" />
+                    <MenuItem mnemonicParsing="false" onAction="#onAddCart" text="Cart Walker" />
+                     -->
+              <MenuItem mnemonicParsing="false" onAction="#onMobileBaseFromFile" text="From File..." />
+              <MenuItem mnemonicParsing="false" onAction="#onMobileBaseFromGit" text="From Git..." />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Vision">
+              <MenuItem mnemonicParsing="false" onAction="#onConnectCVCamera" text="OpenCV camera" />
+              <MenuItem mnemonicParsing="false" onAction="#onConnectCHDKCamera" text="CHDK camera" />
+              <!--<MenuItem mnemonicParsing="false" onAction="#onConnectJavaCVCamera" text="Add a new JavaCV camera" />-->
+              <MenuItem mnemonicParsing="false" onAction="#onConnectFileSourceCamera" text="Image File" />
+              <MenuItem mnemonicParsing="false" onAction="#onConnectURLSourceCamera" text="WebCam URL" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="3d Scanner">
+              <MenuItem mnemonicParsing="false" onAction="#onConnectHokuyoURG" text="Hokuyo URG LIDAR" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Game Controller">
+              <MenuItem mnemonicParsing="false" onAction="#onConnectGamePad" text="GamePad JInput " />
+            </Menu>
+            <Menu mnemonicParsing="false" text="GCODE">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Marlin GCODE" fx:id="addMarlinGCODEDevice" />
+              </items>
+            </Menu>
+          </items>
+        </Menu>
+        <!--  
+        <Menu mnemonicParsing="false" text="CAD">
+                <items>
+                  <CheckMenuItem selected="false" text="Add Default Right Arm" fx:id="AddDefaultRightArm" />
+                  <CheckMenuItem selected="false" text="Add Camera VR" fx:id="AddVRCamera" />
+                </items>
+              </Menu>
+              -->
+        <Menu mnemonicParsing="false" text="GitHub" fx:id="GitHubRoot">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#onLogin" text="Log in to GitHub" />
+            <MenuItem mnemonicParsing="false" onAction="#onLogout" text="Log out of GitHub" fx:id="logoutGithub" />
+            <MenuItem mnemonicParsing="false" onAction="#onOpenGitter" text="Gitter Chat" />
+            <MenuItem mnemonicParsing="false" onAction="#onCreatenewGist" text="Create New Gist" fx:id="createNewGist" />
+            <Menu mnemonicParsing="false" text="My Gists" fx:id="myGists" />
+            <Menu mnemonicParsing="false" text="My Organizations" fx:id="myOrganizations" />
+            <Menu mnemonicParsing="false" text="My Repositories" fx:id="myRepos" />
+            <Menu mnemonicParsing="false" text="Repos I'm Watching" fx:id="watchingRepos" />
+            <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+</BorderPane>
