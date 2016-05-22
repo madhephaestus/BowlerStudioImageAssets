@@ -21,43 +21,39 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <center>
-    <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" prefWidth="-1.0">
+    <AnchorPane prefHeight="-1.0" prefWidth="-1.0">
       <children>
-        <AnchorPane prefHeight="-1.0" prefWidth="-1.0">
+        <StackPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
           <children>
-            <StackPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <children>
-                <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="404.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(155,155,255,0.9) 0%,        rgba(100,100,100,0.9) 100%);" />
-                <BorderPane pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
+            <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="404.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(155,155,255,0.9) 0%,        rgba(100,100,100,0.9) 100%);" />
+            <BorderPane pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
+              <bottom>
+                <AnchorPane fx:id="jfx3dControls" opacity="0.7" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" />
+              </bottom>
+              <left>
+                <ScrollPane fx:id="overlayScrollPanel" blendMode="OVERLAY" content="$null" fitToHeight="true" fitToWidth="true" hbarPolicy="AS_NEEDED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" opacity="0.9" pannable="false" prefHeight="-1.0" prefWidth="-1.0" visible="false" BorderPane.alignment="TOP_LEFT" />
+              </left>
+              <right>
+                <BorderPane minWidth="-1.0" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT">
                   <bottom>
-                    <AnchorPane fx:id="jfx3dControls" opacity="0.7" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" />
+                    <AnchorPane fx:id="TempControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_RIGHT" />
                   </bottom>
-                  <left>
-                    <ScrollPane fx:id="overlayScrollPanel" blendMode="OVERLAY" content="$null" fitToHeight="true" fitToWidth="true" hbarPolicy="AS_NEEDED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" opacity="0.9" pannable="false" prefHeight="-1.0" prefWidth="-1.0" visible="false" BorderPane.alignment="TOP_LEFT" />
-                  </left>
-                  <right>
-                    <BorderPane minWidth="-1.0" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT">
-                      <bottom>
-                        <AnchorPane fx:id="TempControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_RIGHT" />
-                      </bottom>
-                      <top>
-                        <AnchorPane fx:id="DriveControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT" />
-                      </top>
-                    </BorderPane>
-                  </right>
                   <top>
-                    <AnchorPane fx:id="CadControlsAnchor" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
-                      <BorderPane.margin>
-                        <Insets />
-                      </BorderPane.margin>
-                    </AnchorPane>
+                    <AnchorPane fx:id="DriveControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT" />
                   </top>
                 </BorderPane>
-              </children>
-            </StackPane>
+              </right>
+              <top>
+                <AnchorPane fx:id="CadControlsAnchor" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
+                  <BorderPane.margin>
+                    <Insets />
+                  </BorderPane.margin>
+                </AnchorPane>
+              </top>
+            </BorderPane>
           </children>
-        </AnchorPane>
+        </StackPane>
       </children>
-    </VBox>
+    </AnchorPane>
   </center>
 </BorderPane>
