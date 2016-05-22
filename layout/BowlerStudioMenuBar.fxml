@@ -95,7 +95,7 @@
           <items>
             <MenuItem mnemonicParsing="false" text="Show Devices" fx:id="showDevicesPanel" />
             <MenuItem mnemonicParsing="false" text="Show Creature Lab" fx:id="showCreatureLab" />
-            <MenuItem mnemonicParsing="false" text="Unspecified Action" fx:id="showTerminal" />
+            <MenuItem mnemonicParsing="false" text="Show Terminal" fx:id="showTerminal" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
