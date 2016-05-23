@@ -27,11 +27,11 @@
       <children>
         <ToolBar prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
           <items>
-            <Label text="run:" />
-            <TextField fx:id="executionBox" prefWidth="200.0" />
-            <Label text="as:" />
+            <Label minWidth="30.0" text="run:" />
+            <TextField fx:id="executionBox" prefWidth="-1.0" />
+            <Label minWidth="25.0" prefWidth="40.0" text="as:" />
             <ImageView fx:id="langaugeIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
-            <ComboBox fx:id="langauges">
+            <ComboBox fx:id="langauges" minWidth="100.0">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
