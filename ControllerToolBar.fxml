@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+
+<ToolBar id="Robot Controller" fx:id="Controller" prefHeight="160.0" prefWidth="456.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <items>
+      <ImageView fx:id="Add_Controller" translateY="-40.0">
+         <image>
+            <Image url="@../Add-Game-Controller.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Controller_Selector" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" scaleY="0.75" text="Select Controller" translateX="5.0" translateY="-40.0" />
+      <ImageView fx:id="Move_Limb" translateX="-165.0">
+         <image>
+            <Image url="@../Move-Limb.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Limb_Selector" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" scaleY="0.75" text="Select Limb" translateX="-160.0" />
+      <ImageView fx:id="Move_Single_Motor" translateX="-295.0" translateY="40.0">
+         <image>
+            <Image url="@../Move-Single-Motor.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Motor_Selector" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" scaleY="0.75" text="Select Motor" translateX="-290.0" translateY="40.0" />
+  </items>
+</ToolBar>
