@@ -94,11 +94,18 @@
                     </GridPane>
                     <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
                       <children>
-                        <TextField fx:id="ipaddress" prefWidth="200.0" text="127.0.0.1">
+                        <ComboBox fx:id="ipSelector" prefWidth="135.0" promptText="127.0.0.1">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
                           <HBox.margin>
-                            <Insets left="10.0" right="10.0" top="10.0" />
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                           </HBox.margin>
-                        </TextField>
+                        </ComboBox>
                         <Button id="searchButton" fx:id="searchNetwork" mnemonicParsing="false" text="Search" HBox.margin="$x2" />
                       </children>
                     </HBox>
