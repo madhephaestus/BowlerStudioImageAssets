@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="506.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
     <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <tabs>
@@ -18,7 +18,11 @@
               <children>
                 <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <children>
-                    <Label text="Port" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                    <Label text="Port" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                      <GridPane.margin>
+                        <Insets top="10.0" fx:id="x2" />
+                      </GridPane.margin>
+                    </Label>
                     <Label text="Baud" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                     <TextField fx:id="baudrate" prefWidth="200.0" text="9600" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                     <HBox prefHeight="-1.0" prefWidth="-1.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
@@ -32,7 +36,7 @@
                             </FXCollections>
                           </items>
                           <HBox.margin>
-                            <Insets left="10.0" fx:id="x1" />
+                            <Insets left="10.0" top="10.0" fx:id="x1" />
                           </HBox.margin>
                         </ChoiceBox>
                         <Button fx:id="searchSerial" mnemonicParsing="false" text="Search" HBox.margin="$x1" />
@@ -47,9 +51,9 @@
                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="156.0" />
                   </columnConstraints>
                   <rowConstraints>
-                    <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
-                    <RowConstraints maxHeight="295.0" minHeight="10.0" prefHeight="288.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="295.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
                   </rowConstraints>
                 </GridPane>
               </children>
@@ -62,7 +66,7 @@
               <children>
                 <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <children>
-                    <Label text="IP address" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="TOP" />
+                    <Label text="IP address" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="0" GridPane.valignment="TOP" />
                     <Label text="Port" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
                     <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
                       <children>
@@ -74,10 +78,10 @@
                         <RadioButton fx:id="tcpSelect" mnemonicParsing="false" text="TCP" toggleGroup="$portType" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="udpPort" prefWidth="200.0" text="1865" GridPane.columnIndex="0" GridPane.rowIndex="0">
                           <GridPane.margin>
-                            <Insets left="10.0" right="10.0" fx:id="x2" />
+                            <Insets left="10.0" right="10.0" fx:id="x3" />
                           </GridPane.margin>
                         </TextField>
-                        <TextField fx:id="tcpPort" prefWidth="-1.0" text="1965" GridPane.columnIndex="0" GridPane.margin="$x2" GridPane.rowIndex="1" />
+                        <TextField fx:id="tcpPort" prefWidth="-1.0" text="1965" GridPane.columnIndex="0" GridPane.margin="$x3" GridPane.rowIndex="1" />
                       </children>
                       <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -90,21 +94,25 @@
                     </GridPane>
                     <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
                       <children>
-                        <TextField fx:id="ipaddress" prefWidth="200.0" text="127.0.0.1" HBox.margin="$x2" />
-                        <Button id="searchButton" fx:id="searchNetwork" mnemonicParsing="false" text="Search" />
+                        <TextField fx:id="ipaddress" prefWidth="200.0" text="127.0.0.1">
+                          <HBox.margin>
+                            <Insets left="10.0" right="10.0" top="10.0" />
+                          </HBox.margin>
+                        </TextField>
+                        <Button id="searchButton" fx:id="searchNetwork" mnemonicParsing="false" text="Search" HBox.margin="$x2" />
                       </children>
                     </HBox>
                     <Button fx:id="connectNetwork" mnemonicParsing="false" text="Connect Network" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
                   </children>
                   <columnConstraints>
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="55.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="0.0" prefWidth="92.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="531.0" minWidth="10.0" prefWidth="453.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="23.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="0.0" prefWidth="84.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="531.0" minWidth="10.0" prefWidth="399.0" />
                   </columnConstraints>
                   <rowConstraints>
-                    <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                    <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-                    <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="253.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
                   </rowConstraints>
                 </GridPane>
               </children>
