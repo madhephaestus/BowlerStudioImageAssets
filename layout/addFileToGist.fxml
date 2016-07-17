@@ -1,26 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.17628213272249113" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="313.9998558593725" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" >
+<SplitPane dividerPositions="0.25274728339677016" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="183.99997792968497" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
       <children>
         <Label layoutX="85.0" layoutY="19.0" text="Add a file to an existing Git" />
       </children>
     </AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="525.0">
       <children>
-        <VBox layoutX="0.0" layoutY="1.0" prefHeight="254.0" prefWidth="490.0" spacing="10.0">
+        <VBox layoutX="0.0" layoutY="1.0" prefHeight="139.0" prefWidth="525.0" spacing="10.0">
           <children>
-            <ListView fx:id="gistListView" prefHeight="132.0" prefWidth="298.0" />
             <VBox spacing="5.0">
               <children>
-                <Label text="Filename including extension:" />
-                <TextField fx:id="filenameField" prefHeight="25.0" prefWidth="298.0" promptText="Filename including extension..." />
+                <Label text="Filename including extension:">
+                  <VBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" fx:id="x1" />
+                  </VBox.margin>
+                </Label>
+                <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+                  <children>
+                    <TextField fx:id="filenameField" prefHeight="25.0" prefWidth="370.0" promptText="Filename including extension..." HBox.margin="$x1" />
+                    <ImageView fx:id="langaugeIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                    <ChoiceBox fx:id="extention">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Item 1" />
+                          <String fx:value="Item 2" />
+                          <String fx:value="Item 3" />
+                        </FXCollections>
+                      </items>
+                    </ChoiceBox>
+                  </children>
+                </HBox>
               </children>
             </VBox>
             <HBox alignment="TOP_RIGHT" spacing="10.0">
