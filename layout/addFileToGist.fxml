@@ -7,13 +7,8 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.25274728339677016" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="183.99997792968497" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<SplitPane dividerPositions="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="183.99997792968497" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-      <children>
-        <Label layoutX="85.0" layoutY="19.0" text="Add a file to an existing Git" />
-      </children>
-    </AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="525.0">
       <children>
         <VBox layoutX="0.0" layoutY="1.0" prefHeight="139.0" prefWidth="525.0" spacing="10.0">
