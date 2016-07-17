@@ -24,7 +24,7 @@
                   <children>
                     <TextField fx:id="filenameField" prefHeight="25.0" prefWidth="370.0" promptText="Filename including extension..." HBox.margin="$x1" />
                     <ImageView fx:id="langaugeIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
-                    <ChoiceBox fx:id="extention">
+                    <ComboBox fx:id="extention">
                       <items>
                         <FXCollections fx:factory="observableArrayList">
                           <String fx:value="Item 1" />
@@ -32,7 +32,7 @@
                           <String fx:value="Item 3" />
                         </FXCollections>
                       </items>
-                    </ChoiceBox>
+                    </ComboBox>
                   </children>
                 </HBox>
               </children>
