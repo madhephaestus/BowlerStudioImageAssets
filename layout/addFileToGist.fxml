@@ -5,11 +5,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.17628213272249113" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="313.9998558593725" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.neuronrobotics.bowlerstudio.AddFileToGistController">
+<SplitPane dividerPositions="0.17628213272249113" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="313.9998558593725" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" >
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
       <children>
-        <Label layoutX="85.0" layoutY="19.0" text="Add a file to an existing Gist" />
+        <Label layoutX="85.0" layoutY="19.0" text="Add a file to an existing Git" />
       </children>
     </AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
