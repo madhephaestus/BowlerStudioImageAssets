@@ -68,6 +68,11 @@
                 <MenuItem mnemonicParsing="false" text="Marlin GCODE" fx:id="addMarlinGCODEDevice" />
               </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Firmata">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Connect Firmata" fx:id="loadFirmata" />
+              </items>
+            </Menu>
           </items>
         </Menu>
         <!--  
