@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -9,67 +12,90 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-
 <!-- fx:controller="com.neuronrobotics.bowlerstudio.MainController"-->
 
-
-<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="685.0" prefWidth="1127.0000999999975">
-        <children>
-          <SplitPane fx:id="CadTextSplit" dividerPositions="0.6367673179396093" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1411.0" VBox.vgrow="ALWAYS">
-            <items>
-              <SplitPane focusTraversable="true" orientation="VERTICAL" prefHeight="659.0" prefWidth="766.0">
-                <items>
-                  <AnchorPane fx:id="editorContainer" prefHeight="771.0" prefWidth="944.0" />
-                </items>
-              </SplitPane>
-              <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                <children>
-                  <StackPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <children>
-                      <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(155,155,255,0.9) 0%,        rgba(100,100,100,0.9) 100%);" />
-                      <BorderPane pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
-                        <bottom>
-                          <AnchorPane fx:id="jfx3dControls" opacity="0.7" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" />
-                        </bottom>
-                        <left>
-                          <ScrollPane fx:id="overlayScrollPanel" blendMode="OVERLAY" content="$null" fitToHeight="true" fitToWidth="true" hbarPolicy="AS_NEEDED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" opacity="0.9" pannable="false" prefHeight="-1.0" prefWidth="-1.0" visible="false" BorderPane.alignment="TOP_LEFT" />
-                        </left>
-                        <right>
-                          <BorderPane minWidth="-1.0" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT">
-                            <bottom>
-                              <AnchorPane fx:id="TempControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_RIGHT" />
-                            </bottom>
-                            <top>
-                              <AnchorPane fx:id="DriveControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT" />
-                            </top>
-                          </BorderPane>
-                        </right>
-                        <top>
-                          <AnchorPane fx:id="CadControlsAnchor" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
-                            <BorderPane.margin>
-                              <Insets />
-                            </BorderPane.margin>
-                          </AnchorPane>
-                        </top>
-                      </BorderPane>
-                    </children>
-                  </StackPane>
-                </children>
-              </AnchorPane>
-            </items>
-          </SplitPane>
-        </children>
-      </VBox>
-   </center>
-   <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <bottom>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <children>
+        <VBox maxWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <TextArea fx:id="logViewRef" editable="false" prefHeight="-1.0" prefWidth="-1.0" text="" wrapText="true" VBox.vgrow="ALWAYS" />
+            <AnchorPane fx:id="logView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <Accordion prefHeight="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <panes>
+                    <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="false" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" text="Command Line">
+                      <content>
+                        <AnchorPane id="Content" fx:id="CommandLine" minHeight="-1.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" />
+                      </content>
+                    </TitledPane>
+                  </panes>
+                </Accordion>
+              </children>
+            </AnchorPane>
+          </children>
+        </VBox>
+      </children>
+    </AnchorPane>
+  </bottom>
+  <center>
+    <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="685.0" prefWidth="1127.0000999999975">
+      <children>
+        <SplitPane fx:id="CadTextSplit" dividerPositions="0.6367673179396093" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="1411.0" VBox.vgrow="ALWAYS">
+          <items>
+            <SplitPane focusTraversable="true" orientation="VERTICAL" prefHeight="659.0" prefWidth="766.0">
+              <items>
+                <AnchorPane fx:id="editorContainer" prefHeight="771.0" prefWidth="944.0" />
+              </items>
+            </SplitPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+              <children>
+                <StackPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <AnchorPane fx:id="viewContainer" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: radial-gradient(center 50% 50%,        radius 75%,        rgba(155,155,255,0.9) 0%,        rgba(100,100,100,0.9) 100%);" />
+                    <BorderPane pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
+                      <bottom>
+                        <AnchorPane fx:id="jfx3dControls" opacity="0.7" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" />
+                      </bottom>
+                      <left>
+                        <ScrollPane fx:id="overlayScrollPanel" blendMode="OVERLAY" content="$null" fitToHeight="true" fitToWidth="true" hbarPolicy="AS_NEEDED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" opacity="0.9" pannable="false" prefHeight="-1.0" prefWidth="-1.0" visible="false" BorderPane.alignment="TOP_LEFT" />
+                      </left>
+                      <right>
+                        <BorderPane minWidth="-1.0" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT">
+                          <bottom>
+                            <AnchorPane fx:id="TempControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="BOTTOM_RIGHT" />
+                          </bottom>
+                          <top>
+                            <AnchorPane fx:id="DriveControlsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_RIGHT" />
+                          </top>
+                        </BorderPane>
+                      </right>
+                      <top>
+                        <AnchorPane fx:id="CadControlsAnchor" pickOnBounds="false" prefHeight="-1.0" prefWidth="-1.0">
+                          <BorderPane.margin>
+                            <Insets />
+                          </BorderPane.margin>
+                        </AnchorPane>
+                      </top>
+                    </BorderPane>
+                  </children>
+                </StackPane>
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+      </children>
+    </VBox>
+  </center>
+  <top>
+    <MenuBar BorderPane.alignment="CENTER">
+      <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#onLoadFile" text="Load File" />
@@ -84,7 +110,7 @@
               <MenuItem mnemonicParsing="false" onAction="#onConnectVirtual" text="Virtual PID Device" />
               <MenuItem mnemonicParsing="false" onAction="#onConnectPidSim" text="Virtual Torque Controller" />
             </Menu>
-            <Menu fx:id="CreaturesMenu" mnemonicParsing="false" text="Creatures">
+            <Menu mnemonicParsing="false" text="Creatures" fx:id="CreaturesMenu">
               <!-- 
               <MenuItem mnemonicParsing="false" onAction="#onRobotArm" text="Robot Arm" />
                     <MenuItem mnemonicParsing="false" onAction="#onHexapod" text="Six Leg Walker" />
@@ -126,49 +152,26 @@
                 </items>
               </Menu>
               -->
-        <Menu fx:id="GitHubRoot" mnemonicParsing="false" text="GitHub">
+        <Menu mnemonicParsing="false" text="GitHub" fx:id="GitHubRoot">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#onLogin" text="Log in to GitHub" />
-            <MenuItem fx:id="logoutGithub" mnemonicParsing="false" onAction="#onLogout" text="Log out of GitHub" />
+            <MenuItem mnemonicParsing="false" onAction="#onLogout" text="Log out of GitHub" fx:id="logoutGithub" />
             <MenuItem mnemonicParsing="false" onAction="#onOpenGitter" text="Gitter Chat" />
-            <MenuItem fx:id="createNewGist" mnemonicParsing="false" onAction="#onCreatenewGist" text="Create New Gist" />
-            <Menu fx:id="myGists" mnemonicParsing="false" text="My Gists" />
-            <Menu fx:id="myOrganizations" mnemonicParsing="false" text="My Organizations" />
-            <Menu fx:id="myRepos" mnemonicParsing="false" text="My Repositories" />
-            <Menu fx:id="watchingRepos" mnemonicParsing="false" text="Repos I'm Watching" />
-            <MenuItem fx:id="clearCache" mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" />
+            <MenuItem mnemonicParsing="false" onAction="#onCreatenewGist" text="Create New Gist" fx:id="createNewGist" />
+            <Menu mnemonicParsing="false" text="My Gists" fx:id="myGists" />
+            <Menu mnemonicParsing="false" text="My Organizations" fx:id="myOrganizations" />
+            <Menu mnemonicParsing="false" text="My Repositories" fx:id="myRepos" />
+            <Menu mnemonicParsing="false" text="Repos I'm Watching" fx:id="watchingRepos" />
+            <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
+            <MenuItem id="changeAssetRepo" mnemonicParsing="false" onAction="#changeAssetRepoButtonPressed" text="Change Asset Repository" />
           </items>
         </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
-   <bottom>
-<AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-  <children>
-    <VBox maxWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <children>
-        <TextArea fx:id="logViewRef" editable="false" prefHeight="-1.0" prefWidth="-1.0" text="" wrapText="true" VBox.vgrow="ALWAYS" />
-        <AnchorPane fx:id="logView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
-          <children>
-            <Accordion prefHeight="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <panes>
-                <TitledPane fx:id="commandLineTitledPane" animated="false" expanded="false" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" text="Command Line">
-                  <content>
-                    <AnchorPane id="Content" fx:id="CommandLine" minHeight="-1.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" />
-                  </content>
-                </TitledPane>
-              </panes>
-            </Accordion>
-          </children>
-        </AnchorPane>
-      </children>
-    </VBox>
-  </children>
-</AnchorPane>
-   </bottom>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
 </BorderPane>
