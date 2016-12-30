@@ -94,6 +94,7 @@
             <Menu mnemonicParsing="false" text="My Repositories" fx:id="myRepos" />
             <Menu mnemonicParsing="false" text="Repos I'm Watching" fx:id="watchingRepos" />
             <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
+            <MenuItem mnemonicParsing="false" onAction="#changeAssetRepoButtonPressed" text="Change Asset Repository" />
             <MenuItem mnemonicParsing="false" onAction="#onRefresh" text="Refresh Menu" fx:id="refresh" />
           </items>
         </Menu>

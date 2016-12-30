@@ -163,7 +163,6 @@
             <Menu mnemonicParsing="false" text="My Repositories" fx:id="myRepos" />
             <Menu mnemonicParsing="false" text="Repos I'm Watching" fx:id="watchingRepos" />
             <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
-            <MenuItem id="changeAssetRepo" mnemonicParsing="false" onAction="#changeAssetRepoButtonPressed" text="Change Asset Repository" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
