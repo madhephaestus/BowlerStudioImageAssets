@@ -22,7 +22,7 @@
     <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <CheckBox fx:id="matchCase" contentDisplay="CENTER" mnemonicParsing="false" text="Match Case" GridPane.columnIndex="2">
+      <CheckBox fx:id="matchCase" contentDisplay="CENTER" mnemonicParsing="false" selected="true" text="Match Case" GridPane.columnIndex="2">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
