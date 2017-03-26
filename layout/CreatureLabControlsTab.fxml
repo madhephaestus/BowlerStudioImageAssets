@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="714.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <GridPane GridPane.columnIndex="1">
@@ -27,23 +26,19 @@
         </rowConstraints>
          <children>
             <AnchorPane fx:id="walkingBox" />
-            <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <ScrollPane fitToHeight="true" fitToWidth="true" GridPane.rowIndex="1">
               <content>
-                <AnchorPane fx:id="controlsBox" minHeight="-Infinity" minWidth="-Infinity" />
+                <AnchorPane fx:id="controlsBox" />
               </content>
             </ScrollPane>
          </children>
       </GridPane>
-      <VBox prefHeight="200.0" prefWidth="100.0">
+      <VBox prefHeight="478.0" prefWidth="277.0">
          <children>
             <AnchorPane fx:id="progressBar" />
-            <ScrollPane prefHeight="291.0" prefWidth="300.0">
+            <ScrollPane>
               <content>
-                <AnchorPane fx:id="treeBox">
-                     <children>
-                        <TreeView fx:id="creatureTree" prefHeight="200.0" prefWidth="200.0" />
-                     </children>
-                  </AnchorPane>
+                <AnchorPane fx:id="treeBox" />
               </content>
             </ScrollPane>
          </children>
