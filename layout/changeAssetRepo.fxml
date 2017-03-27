@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="splitpane" dividerPositions="0.3276594350385418" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="237.00009999999747" prefWidth="446.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="69.0" prefWidth="398.0">
+      <children>
+        <Label alignment="CENTER" prefHeight="114.0" prefWidth="598.0" text="Changing your asset repository allows you to modify BowlerStudio's&#10;look and feel. Please clean the local cache and restart&#10;BowlerStudio to make changes take effect." textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      </children>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+      <children>
+        <VBox layoutX="10.0" layoutY="14.0" spacing="10.0">
+          <children>
+            <VBox prefHeight="139.0" prefWidth="420.0" spacing="5.0">
+              <children>
+                <Label text="HTTPS Address of repository:">
+                  <VBox.margin>
+                    <Insets left="1.0" />
+                  </VBox.margin>
+                </Label>
+                <TextField id="filenameField" fx:id="repoField" prefHeight="25.0" prefWidth="378.0" promptText="HTTPS Address of repository" />
+                <GridPane hgap="10.0">
+                  <children>
+                    <Button id="addAsPublicButton" fx:id="changeRepoButton" mnemonicParsing="false" onAction="#onChangeRepo" text="Change Repository" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <VBox.margin>
+                    <Insets left="80.0" />
+                  </VBox.margin>
+                </GridPane>
+              </children>
+            </VBox>
+          </children>
+        </VBox>
+      </children>
+    </AnchorPane>
+  </items>
+</SplitPane>
