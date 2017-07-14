@@ -93,17 +93,6 @@
             <MenuItem fx:id="showDevicesPanel" mnemonicParsing="false" text="Show Devices" />
             <MenuItem fx:id="showCreatureLab" mnemonicParsing="false" text="Show Creature Lab" />
             <MenuItem fx:id="showTerminal" mnemonicParsing="false" text="Show Terminal" />
-                  <Menu mnemonicParsing="false" text="Font Size">
-                    <items>
-                        <CheckMenuItem mnemonicParsing="false" onAction="#on10pt" text="10 pt" />
-                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
-                        <CheckMenuItem mnemonicParsing="false" onAction="#on16pt" text="16 pt" />
-                        <CheckMenuItem mnemonicParsing="false" onAction="#on20pt" text="20 pt" />
-                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
-                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
-                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
-                    </items>
-                  </Menu>
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
