@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.CheckMenuItem?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
+
 <!-- fx:controller="com.neuronrobotics.bowlerstudio.MainController"-->
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
   <top>
     <MenuBar fx:id="MeneBarBowlerStudio" BorderPane.alignment="CENTER">
       <menus>
@@ -36,7 +26,7 @@
               <MenuItem mnemonicParsing="false" onAction="#onConnectVirtual" text="Virtual PID Device" />
               <MenuItem mnemonicParsing="false" onAction="#onConnectPidSim" text="Virtual Torque Controller" />
             </Menu>
-            <Menu mnemonicParsing="false" text="Creatures" fx:id="CreaturesMenu">
+            <Menu fx:id="CreaturesMenu" mnemonicParsing="false" text="Creatures">
               <!-- 
               <MenuItem mnemonicParsing="false" onAction="#onRobotArm" text="Robot Arm" />
                     <MenuItem mnemonicParsing="false" onAction="#onHexapod" text="Six Leg Walker" />
@@ -65,12 +55,12 @@
             </Menu>
             <Menu mnemonicParsing="false" text="GCODE">
               <items>
-                <MenuItem mnemonicParsing="false" text="Marlin GCODE" fx:id="addMarlinGCODEDevice" />
+                <MenuItem fx:id="addMarlinGCODEDevice" mnemonicParsing="false" text="Marlin GCODE" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Firmata">
               <items>
-                <MenuItem mnemonicParsing="false" text="Connect Firmata" fx:id="loadFirmata" />
+                <MenuItem fx:id="loadFirmata" mnemonicParsing="false" text="Connect Firmata" />
               </items>
             </Menu>
           </items>
@@ -83,26 +73,37 @@
                 </items>
               </Menu>
               -->
-        <Menu mnemonicParsing="false" text="GitHub" fx:id="GitHubRoot">
+        <Menu fx:id="GitHubRoot" mnemonicParsing="false" text="GitHub">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#onLogin" text="Log in to GitHub" />
-            <MenuItem mnemonicParsing="false" onAction="#onLogout" text="Log out of GitHub" fx:id="logoutGithub" />
+            <MenuItem fx:id="logoutGithub" mnemonicParsing="false" onAction="#onLogout" text="Log out of GitHub" />
             <MenuItem mnemonicParsing="false" onAction="#onOpenGitter" text="Gitter Chat" />
-            <MenuItem mnemonicParsing="false" onAction="#onCreatenewGist" text="Create New Gist" fx:id="createNewGist" />
-            <Menu mnemonicParsing="false" text="My Gists" fx:id="myGists" />
-            <Menu mnemonicParsing="false" text="My Organizations" fx:id="myOrganizations" />
-            <Menu mnemonicParsing="false" text="My Repositories" fx:id="myRepos" />
-            <Menu mnemonicParsing="false" text="Repos I'm Watching" fx:id="watchingRepos" />
-            <MenuItem mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" fx:id="clearCache" />
+            <MenuItem fx:id="createNewGist" mnemonicParsing="false" onAction="#onCreatenewGist" text="Create New Gist" />
+            <Menu fx:id="myGists" mnemonicParsing="false" text="My Gists" />
+            <Menu fx:id="myOrganizations" mnemonicParsing="false" text="My Organizations" />
+            <Menu fx:id="myRepos" mnemonicParsing="false" text="My Repositories" />
+            <Menu fx:id="watchingRepos" mnemonicParsing="false" text="Repos I'm Watching" />
+            <MenuItem fx:id="clearCache" mnemonicParsing="false" onAction="#clearScriptCache" text="Clean Local Cache" />
             <MenuItem mnemonicParsing="false" onAction="#changeAssetRepoButtonPressed" text="Change Asset Repository" />
-            <MenuItem mnemonicParsing="false" onAction="#onRefresh" text="Refresh Menu" fx:id="refresh" />
+            <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#onRefresh" text="Refresh Menu" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Window">
+        <Menu fx:id="WindowMenu" mnemonicParsing="false" text="Window">
           <items>
-            <MenuItem mnemonicParsing="false" text="Show Devices" fx:id="showDevicesPanel" />
-            <MenuItem mnemonicParsing="false" text="Show Creature Lab" fx:id="showCreatureLab" />
-            <MenuItem mnemonicParsing="false" text="Show Terminal" fx:id="showTerminal" />
+            <MenuItem fx:id="showDevicesPanel" mnemonicParsing="false" text="Show Devices" />
+            <MenuItem fx:id="showCreatureLab" mnemonicParsing="false" text="Show Creature Lab" />
+            <MenuItem fx:id="showTerminal" mnemonicParsing="false" text="Show Terminal" />
+                  <Menu mnemonicParsing="false" text="Font Size">
+                    <items>
+                        <CheckMenuItem mnemonicParsing="false" onAction="#on10pt" text="10 pt" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#on16pt" text="16 pt" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#on20pt" text="20 pt" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#on12pt" text="12 pt" />
+                    </items>
+                  </Menu>
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
