@@ -87,7 +87,11 @@
             <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#onRefresh" text="Refresh Menu" />
           </items>
         </Menu>
-            <Menu id="workspacemenu" mnemonicParsing="false" text="Workspace" />
+        <Menu id="workspacemenu" mnemonicParsing="false" text="Workspace" >
+	          <items>
+	            <MenuItem mnemonicParsing="false" text="About" />
+	          </items>
+        </Menu>
         <Menu fx:id="WindowMenu" mnemonicParsing="false" text="Window">
           <items>
             <MenuItem fx:id="showDevicesPanel" mnemonicParsing="false" text="Show Devices" />
