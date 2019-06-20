@@ -5,7 +5,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane >
   <top>
     <MenuBar fx:id="MeneBarBowlerStudio" BorderPane.alignment="CENTER">
       <menus>
@@ -85,7 +85,7 @@
             <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#onRefresh" text="Refresh Menu" />
           </items>
         </Menu>
-        <Menu id="workspacemenu" mnemonicParsing="false" text="Workspace" >
+        <Menu fx:id="workspacemenuHandle" mnemonicParsing="false" text="Workspace" >
 	          <items>
 	            <MenuItem mnemonicParsing="false" text="About" />
 	          </items>
