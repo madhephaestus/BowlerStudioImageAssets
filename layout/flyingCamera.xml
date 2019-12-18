@@ -4,6 +4,8 @@
 <name>FlyingCamera</name>
 <appendage>
 <name>BoomArm</name>
+<mass>0.2</mass>
+
 <link>
 	<name>boom</name>
 	<deviceName>virtualCameraDevice</deviceName>
