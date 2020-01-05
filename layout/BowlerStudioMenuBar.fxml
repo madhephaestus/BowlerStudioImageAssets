@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.CheckMenuItem?>
+
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
   <top>
     <MenuBar fx:id="MeneBarBowlerStudio" BorderPane.alignment="CENTER">
       <menus>
@@ -85,7 +85,7 @@
             <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#onRefresh" text="Refresh Menu" />
           </items>
         </Menu>
-        <Menu fx:id="workspacemenuHandle" mnemonicParsing="false" text="Workspace" >
+        <Menu fx:id="workspacemenuHandle" mnemonicParsing="false" text="Workspace">
 	          <items>
 	            <MenuItem mnemonicParsing="false" text="About" />
 	          </items>
@@ -97,11 +97,16 @@
             <MenuItem fx:id="showTerminal" mnemonicParsing="false" text="Show Terminal" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Help">
+        <Menu mnemonicParsing="false" text="CAD Vitamins">
           <items>
-            <MenuItem mnemonicParsing="false" text="About" />
+            <MenuItem mnemonicParsing="false" onAction="#onCreateNewVitamin" text="New Vitamin..." />
           </items>
         </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onBowlerStudioHelp" text="About" />
+               </items>
+            </Menu>
       </menus>
     </MenuBar>
   </top>
