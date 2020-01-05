@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="600.0" prefWidth="900.0" type="VBox" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewVitaminWizardController">
   <children>
     <SplitPane dividerPositions="0.2505567928730512, 0.5044543429844098" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
@@ -65,4 +65,4 @@
       </items>
     </SplitPane>
   </children>
-</VBox>
+</fx:root>
