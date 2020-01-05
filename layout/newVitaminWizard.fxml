@@ -18,7 +18,7 @@
   <children>
     <SplitPane dividerPositions="0.2505567928730512, 0.5044543429844098" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane prefHeight="533.0" prefWidth="215.0">
+        <AnchorPane fx:id="typePane" prefHeight="533.0" prefWidth="215.0">
           <children>
             <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Type" textAlignment="CENTER" wrapText="false">
               <font>
@@ -37,7 +37,7 @@
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="598.0" prefWidth="212.0">
+            <AnchorPane id="Content" fx:id="sizePane" minHeight="-1.0" minWidth="-1.0" prefHeight="598.0" prefWidth="212.0">
               <children>
                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Size" textAlignment="CENTER" textFill="$x2" wrapText="false" />
                         <ComboBox fx:id="sizeComboBox" layoutX="12.0" layoutY="74.0" prefWidth="150.0" />
@@ -49,7 +49,7 @@
             </AnchorPane>
           </content>
         </ScrollPane>
-        <AnchorPane>
+        <AnchorPane fx:id="measurmentPane">
           <children>
             <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Measurments" textAlignment="CENTER" textFill="$x2" wrapText="false" />
                   <TableView fx:id="measurmentsTable" layoutY="35.0" prefHeight="486.0" prefWidth="449.0">
