@@ -54,8 +54,8 @@
             <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Measurments" textAlignment="CENTER" textFill="$x2" wrapText="false" />
                   <TableView fx:id="measurmentsTable" layoutY="35.0" prefHeight="486.0" prefWidth="449.0">
                     <columns>
-                      <TableColumn prefWidth="202.0" text="Name" />
-                      <TableColumn prefWidth="246.0" text="Measurment" />
+                      <TableColumn fx:id="nameColumn" prefWidth="202.0" text="Name" />
+                      <TableColumn fx:id="measurmentColumn" prefWidth="246.0" text="Measurment" />
                     </columns>
                   </TableView>
                   <Button layoutX="2.0" layoutY="520.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
