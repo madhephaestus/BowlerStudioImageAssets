@@ -30,7 +30,7 @@
             </Label>
                   <RadioButton fx:id="existingTypeRadio" layoutX="22.0" layoutY="49.0" mnemonicParsing="false" onAction="#onSelectExistingTypeMode" text="Existing Type" />
                   <RadioButton fx:id="newTypeRadio" layoutX="22.0" layoutY="127.0" mnemonicParsing="false" onAction="#onSelectNewTypeMode" text="New Type" />
-                  <TextField layoutX="15.0" layoutY="158.0" onAction="#onConfirmType" promptText="New Type Here" />
+                  <TextField fx:id="newTypeNameField" layoutX="15.0" layoutY="158.0" onAction="#onConfirmType" promptText="New Type Here" />
                   <ComboBox fx:id="typeComboBox" layoutX="15.0" layoutY="75.0" prefWidth="150.0" />
                   <Button layoutY="561.0" mnemonicParsing="false" onAction="#onConfirmType" prefHeight="36.0" prefWidth="215.0" text="Confirm Type" />
           </children>
@@ -43,7 +43,7 @@
                         <ComboBox fx:id="sizeComboBox" layoutX="12.0" layoutY="74.0" prefWidth="150.0" />
                         <Label layoutX="12.0" layoutY="129.0" text="New Size" />
                         <Label layoutX="12.0" layoutY="49.0" text="From Existing Size" />
-                        <TextField layoutX="12.0" layoutY="157.0" onAction="#onConfirmSize" />
+                        <TextField fx:id="newSizeField" layoutX="12.0" layoutY="157.0" onAction="#onConfirmSize" />
                         <Button layoutX="2.0" layoutY="561.0" mnemonicParsing="false" onAction="#onConfirmSize" prefHeight="36.0" prefWidth="208.0" text="Confirm Size" />
               </children>
             </AnchorPane>
