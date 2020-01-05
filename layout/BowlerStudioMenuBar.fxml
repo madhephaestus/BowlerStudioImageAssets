@@ -97,9 +97,9 @@
             <MenuItem fx:id="showTerminal" mnemonicParsing="false" text="Show Terminal" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="CAD Vitamins">
+        <Menu fx:id="vitaminsMenu" mnemonicParsing="false" text="CAD Vitamins">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#onCreateNewVitamin" text="New Vitamin..." />
+            <MenuItem fx:id="addNewVitamin" mnemonicParsing="false" onAction="#onCreateNewVitamin" text="New Vitamin..." />
           </items>
         </Menu>
             <Menu mnemonicParsing="false" text="Help">
