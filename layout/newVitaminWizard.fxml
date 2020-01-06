@@ -62,8 +62,8 @@
                       <TableColumn fx:id="measurmentColumn" prefWidth="246.0" text="Measurment" />
                     </columns>
                   </TableView>
-                  <Button layoutX="2.0" layoutY="520.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
-                  <Button layoutX="2.0" layoutY="556.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="36.0" prefWidth="449.0" text="Confirm new Vitamin and Create..." />
+                  <Button fx:id="newMeasurmentButton" layoutX="2.0" layoutY="520.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
+                  <Button layoutX="2.0" layoutY="556.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="36.0" prefWidth="449.0" text="Confirm Vitamin Changes" />
           </children>
         </AnchorPane>
       </items>
