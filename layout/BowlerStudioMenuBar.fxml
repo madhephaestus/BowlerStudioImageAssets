@@ -12,6 +12,7 @@
         <Menu mnemonicParsing="false" text="File">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#onLoadFile" text="Load File" />
+                  <MenuItem mnemonicParsing="false" onAction="#createNewGist" text="New Project..." />
             <MenuItem mnemonicParsing="false" onAction="#onPrint" text="Print..." />
             <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
           </items>
@@ -75,7 +76,7 @@
             <MenuItem mnemonicParsing="false" onAction="#onLogin" text="Log in to GitHub" />
             <MenuItem fx:id="logoutGithub" mnemonicParsing="false" onAction="#onLogout" text="Log out of GitHub" />
             <MenuItem mnemonicParsing="false" onAction="#onOpenGitter" text="Gitter Chat" />
-            <MenuItem fx:id="createNewGist" mnemonicParsing="false" onAction="#onCreatenewGist" text="Create New Gist" />
+            <MenuItem fx:id="createNewGist" mnemonicParsing="false" onAction="#onCreatenewGist" text="New Project..." />
             <Menu fx:id="myGists" mnemonicParsing="false" text="My Gists" />
             <Menu fx:id="myOrganizations" mnemonicParsing="false" text="My Organizations" />
             <Menu fx:id="myRepos" mnemonicParsing="false" text="My Repositories" />
