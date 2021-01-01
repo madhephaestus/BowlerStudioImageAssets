@@ -1,30 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.collections.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="293.999977929685" prefWidth="547.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
-  <items>
-    <AnchorPane minHeight="50.0" minWidth="200.0" prefHeight="289.0" prefWidth="545.0">
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="newProject">
+         <children>
+            <GridPane layoutY="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ComboBox fx:id="projects" prefHeight="30.0" prefWidth="197.0" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <TextField fx:id="repoName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" text="Create New Project" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label text="Project">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="New Repo Name" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+    <AnchorPane fx:id="addFile" minHeight="50.0" minWidth="200.0" prefHeight="289.0" prefWidth="545.0">
       <children>
         <VBox prefHeight="139.0" prefWidth="525.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
           <children>
             <VBox spacing="5.0">
               <children>
-                <Label text="Filename including extension:">
+                <Label text="Filename:">
                   <VBox.margin>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" fx:id="x1" />
                   </VBox.margin>
                 </Label>
                 <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
                   <children>
-                    <TextField fx:id="filenameField" minHeight="25.0" prefHeight="25.0" prefWidth="370.0" promptText="Filename including extension..." HBox.margin="$x1" />
-                    <ImageView fx:id="langaugeIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
-                    <ComboBox fx:id="extention">
+                    <TextField fx:id="filenameField" minHeight="25.0" prefHeight="25.0" prefWidth="440.0" promptText="Filename" HBox.hgrow="ALWAYS" HBox.margin="$x1" />
+                    <ImageView fx:id="langaugeIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER" />
+                    <ComboBox fx:id="extention" prefHeight="36.0" prefWidth="173.0">
                       <items>
                         <FXCollections fx:factory="observableArrayList">
                           <String fx:value="Item 1" />
@@ -32,22 +84,48 @@
                           <String fx:value="Item 3" />
                         </FXCollections>
                       </items>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
                     </ComboBox>
                   </children>
                 </HBox>
               </children>
             </VBox>
-            <HBox alignment="TOP_RIGHT" spacing="10.0">
-              <children>
-                <Button fx:id="addFileButton" mnemonicParsing="false" onAction="#onAddFile" text="Add File" />
-                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
-              </children>
-            </HBox>
-            <Label text="Description:" />
-            <TextArea fx:id="description" prefHeight="140.0" prefWidth="518.0" promptText="What is this file for?" wrapText="true" />
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="NEVER" maxWidth="134.0" minWidth="10.0" prefWidth="79.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="431.0" minWidth="10.0" prefWidth="368.0" />
+                      <ColumnConstraints hgrow="NEVER" maxWidth="174.0" minWidth="10.0" prefWidth="98.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                    </rowConstraints>
+                     <children>
+                <Button fx:id="addFileButton" mnemonicParsing="false" onAction="#onAddFile" prefHeight="26.0" prefWidth="94.0" text="Go!" GridPane.columnIndex="2">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancel" text="Cancel">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+            <Label text="Description:">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+            <TextArea fx:id="description" prefHeight="140.0" prefWidth="518.0" promptText="What is this file for?" wrapText="true" VBox.vgrow="ALWAYS" />
           </children>
         </VBox>
       </children>
     </AnchorPane>
-  </items>
-</SplitPane>
+   </children>
+</VBox>
