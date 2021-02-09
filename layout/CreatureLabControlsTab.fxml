@@ -18,7 +18,7 @@
                       <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints maxHeight="120.0" minHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="NEVER" />
                       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
