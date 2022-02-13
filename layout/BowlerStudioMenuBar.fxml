@@ -11,7 +11,8 @@
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#onLoadFile" text="Load File" />
+            <MenuItem mnemonicParsing="false" onAction="#onLoadFile" text="Load File..." />
+            <MenuItem mnemonicParsing="false" onAction="#onLoadGit" text="Load File From Git..." />
                   <MenuItem mnemonicParsing="false" onAction="#onCreatenewGist" text="New Project..." />
             <MenuItem mnemonicParsing="false" onAction="#onPrint" text="Print..." />
             <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
