@@ -53,28 +53,32 @@
             </AnchorPane>
           </content>
         </ScrollPane>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <AnchorPane fx:id="measurmentPane">
                <children>
-            <Label alignment="CENTER" font="$x1" style="&#10;" text="Measurments" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                  <TableView fx:id="measurmentsTable" editable="true" VBox.vgrow="ALWAYS">
-                    <columns>
-                      <TableColumn fx:id="nameColumn" prefWidth="202.0" text="Name" />
-                      <TableColumn fx:id="measurmentColumn" prefWidth="246.0" text="Measurment" />
-                    </columns>
-                  </TableView>
-                  <Button fx:id="newMeasurmentButton" maxHeight="36.0" maxWidth="449.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
-                  <HBox maxHeight="18.0" prefHeight="18.0" prefWidth="441.0">
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <CheckBox fx:id="isMotor" mnemonicParsing="false" onAction="#onIsMotor" text="Is Motor" />
-                        <CheckBox fx:id="isShaft" mnemonicParsing="false" onAction="#onIsShaft" text="Is Shaft" />
+                  <Label alignment="CENTER" font="$x1" style="&#10;" text="Measurments" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <TableView fx:id="measurmentsTable" editable="true" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="202.0" text="Name" />
+                            <TableColumn fx:id="measurmentColumn" prefWidth="246.0" text="Measurment" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="newMeasurmentButton" maxHeight="36.0" maxWidth="449.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
+                        <HBox maxHeight="18.0" prefHeight="18.0" prefWidth="441.0">
+                           <children>
+                              <CheckBox fx:id="isMotor" mnemonicParsing="false" onAction="#onIsMotor" text="Is Motor" />
+                              <CheckBox fx:id="isShaft" mnemonicParsing="false" onAction="#onIsShaft" text="Is Shaft" />
+                           </children>
+                        </HBox>
+                        <Button maxHeight="82.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="82.0" prefWidth="227.0" text="Confirm Vitamin Changes" />
                      </children>
-                  </HBox>
-                  <Button maxHeight="36.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="36.0" prefWidth="449.0" text="Confirm Vitamin Changes" />
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
                </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </VBox>
+            </AnchorPane>
       </items>
     </SplitPane>
   </children>
