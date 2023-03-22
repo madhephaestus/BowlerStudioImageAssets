@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
@@ -11,11 +12,12 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neuronrobotics.bowlerstudio.NewVitaminWizardController">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neuronrobotics.bowlerstudio.NewVitaminWizardController">
   <children>
     <SplitPane dividerPositions="0.2505567928730512, 0.5044543429844098" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
@@ -26,7 +28,7 @@
                 <Font size="18.0" fx:id="x1" />
               </font>
               <textFill>
-                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
               </textFill>
             </Label>
                   <RadioButton fx:id="existingTypeRadio" layoutX="22.0" layoutY="49.0" mnemonicParsing="false" onAction="#onSelectExistingTypeMode" text="Existing Type" />
@@ -34,8 +36,6 @@
                   <TextField fx:id="newTypeNameField" layoutX="15.0" layoutY="158.0" onAction="#onConfirmType" promptText="New Type Here" />
                   <ComboBox fx:id="typeComboBox" layoutX="15.0" layoutY="75.0" prefWidth="150.0" />
                   <Button layoutY="561.0" mnemonicParsing="false" onAction="#onConfirmType" prefHeight="36.0" prefWidth="215.0" text="Confirm Type" />
-                  <CheckBox fx:id="isMotor" layoutX="6.0" layoutY="200.0" mnemonicParsing="false" onAction="#onIsMotor" text="Is Motor" />
-                  <CheckBox fx:id="isShaft" layoutX="8.0" layoutY="230.0" mnemonicParsing="false" onAction="#onIsShaft" text="Is Shaft" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
@@ -53,19 +53,28 @@
             </AnchorPane>
           </content>
         </ScrollPane>
-        <AnchorPane fx:id="measurmentPane">
-          <children>
-            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Measurments" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                  <TableView fx:id="measurmentsTable" editable="true" layoutY="35.0" prefHeight="486.0" prefWidth="449.0">
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+            <Label alignment="CENTER" font="$x1" style="&#10;" text="Measurments" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <TableView fx:id="measurmentsTable" editable="true" VBox.vgrow="ALWAYS">
                     <columns>
                       <TableColumn fx:id="nameColumn" prefWidth="202.0" text="Name" />
                       <TableColumn fx:id="measurmentColumn" prefWidth="246.0" text="Measurment" />
                     </columns>
                   </TableView>
-                  <Button fx:id="newMeasurmentButton" layoutX="2.0" layoutY="520.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
-                  <Button layoutX="2.0" layoutY="556.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="36.0" prefWidth="449.0" text="Confirm Vitamin Changes" />
-          </children>
-        </AnchorPane>
+                  <Button fx:id="newMeasurmentButton" maxHeight="36.0" maxWidth="449.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
+                  <HBox maxHeight="18.0" prefHeight="18.0" prefWidth="441.0">
+                     <children>
+                        <CheckBox fx:id="isMotor" mnemonicParsing="false" onAction="#onIsMotor" text="Is Motor" />
+                        <CheckBox fx:id="isShaft" mnemonicParsing="false" onAction="#onIsShaft" text="Is Shaft" />
+                     </children>
+                  </HBox>
+                  <Button maxHeight="36.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="36.0" prefWidth="449.0" text="Confirm Vitamin Changes" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
       </items>
     </SplitPane>
   </children>
