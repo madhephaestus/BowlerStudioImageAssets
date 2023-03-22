@@ -71,7 +71,7 @@
                               <CheckBox fx:id="isShaft" mnemonicParsing="false" onAction="#onIsShaft" text="Is Shaft" />
                            </children>
                         </HBox>
-                        <Button maxHeight="82.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="82.0" prefWidth="227.0" text="Confirm Vitamin Changes" />
+                        <Button maxHeight="82.0" mnemonicParsing="false" onAction="#onConfirmAndCreate" prefHeight="41.0" prefWidth="448.0" text="Confirm Vitamin Changes" />
                      </children>
                      <opaqueInsets>
                         <Insets />
