@@ -67,7 +67,7 @@
                         <Button fx:id="newMeasurmentButton" maxHeight="36.0" maxWidth="449.0" mnemonicParsing="false" onAction="#onNewMeasurment" prefHeight="36.0" prefWidth="449.0" text="New Measurment..." />
                         <HBox maxHeight="18.0" prefHeight="18.0" prefWidth="441.0">
                            <children>
-                              <CheckBox fx:id="isMotor" mnemonicParsing="false" onAction="#onIsMotor" text="Is Motor" />
+                              <CheckBox fx:id="isMotor" mnemonicParsing="false" onAction="#onIsMotor" text="Is Actuator" />
                               <CheckBox fx:id="isShaft" mnemonicParsing="false" onAction="#onIsShaft" text="Is Shaft" />
                            </children>
                         </HBox>
