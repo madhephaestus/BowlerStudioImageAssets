@@ -37,7 +37,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="add" mnemonicParsing="false" onAction="#onAdd" styleClass="button-run" stylesheets="@default.css" text="Add Vitamin" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="add" mnemonicParsing="false" onAction="#onAdd" style="-fx-graphic: url(&quot;../Vitamins.png&quot;);" styleClass="button-run" stylesheets="@default.css" text="Add Vitamin" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   <TextField fx:id="name" GridPane.rowIndex="1" />
                   <ComboBox fx:id="type" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <ComboBox fx:id="size" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />

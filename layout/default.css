@@ -190,12 +190,18 @@
 .button-stop {
 	-fx-background-color: #DC143C;
 }
+/**
+  * BowlerStudio Section
+  *
+ */
 
 .button-stop:hover {
 	-fx-background-color: #CD5C5C;
 }
 
-
+.button{
+ 	min-width: 90px;
+}
 .button:hover {
 	-fx-background-color: #FFFF00;
 }
