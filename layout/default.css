@@ -178,3 +178,25 @@
 .dock-minimize-button {
   -fx-graphic: url(minimize.png);
 }
+
+.button-run {
+	-fx-background-color: #7CFC00;
+}
+
+.button-run:hover {
+	-fx-background-color: #90EE90;
+}
+
+.button-stop {
+	-fx-background-color: #DC143C;
+}
+
+.button-stop:hover {
+	-fx-background-color: #CD5C5C;
+}
+
+
+.button:hover {
+	-fx-background-color: #FFFF00;
+}
+
