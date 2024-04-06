@@ -37,7 +37,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="add" mnemonicParsing="false" onAction="#onAdd" style="-fx-graphic: url(&quot;../Vitamins.png&quot;);" styleClass="button-run" stylesheets="@default.css" text="Add Vitamin" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="add" disable="true" mnemonicParsing="false" onAction="#onAdd" styleClass="button-run" stylesheets="@default.css" text="Add Vitamin" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   <TextField fx:id="name" GridPane.rowIndex="1" />
                   <ComboBox fx:id="type" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <ComboBox fx:id="size" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
@@ -58,12 +58,12 @@
               <content>
                 <AnchorPane minWidth="200.0">
                      <children>
-                        <TableView layoutY="2.0" minHeight="100.0">
+                        <TableView fx:id="table" layoutY="2.0" minHeight="100.0">
                           <columns>
-                              <TableColumn prefWidth="29.0" />
-                            <TableColumn minWidth="124.0" prefWidth="124.0" text="Name" />
-                            <TableColumn prefWidth="142.0" text="Type" />
-                              <TableColumn prefWidth="267.0" text="Size" />
+                              <TableColumn fx:id="delComlumn" prefWidth="29.0" />
+                            <TableColumn fx:id="nameColumn" minWidth="124.0" prefWidth="124.0" text="Name" />
+                            <TableColumn fx:id="typeColumn" prefWidth="142.0" text="Type" />
+                              <TableColumn fx:id="sizeColumn" prefWidth="267.0" text="Size" />
                           </columns>
                         </TableView>
                      </children>
