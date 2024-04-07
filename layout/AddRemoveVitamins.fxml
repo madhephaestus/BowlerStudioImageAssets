@@ -48,11 +48,15 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </GridPane>
-            <ScrollPane prefHeight="475.0" prefWidth="370.0" GridPane.rowIndex="2">
-              <content>
-                <AnchorPane fx:id="transformPanel" minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="370.0" />
-              </content>
-            </ScrollPane>
+            <AnchorPane GridPane.rowIndex="2">
+               <children>
+                  <ScrollPane AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane fx:id="transformPanel" minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="370.0" />
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
             <ScrollPane GridPane.rowIndex="1">
               <content>
                 <AnchorPane minWidth="200.0">
