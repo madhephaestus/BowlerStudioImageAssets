@@ -4,16 +4,15 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neuronrobotics.bowlerstudio.creature.VitatminWidget">
    <children>
       <GridPane prefHeight="386.0" prefWidth="583.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -22,7 +21,7 @@
         <rowConstraints>
           <RowConstraints fillHeight="false" maxHeight="187.0" minHeight="10.0" prefHeight="97.0" vgrow="NEVER" />
           <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="178.0" vgrow="ALWAYS" />
-            <RowConstraints vgrow="NEVER" />
+            <RowConstraints prefHeight="500.0" vgrow="NEVER" />
         </rowConstraints>
          <children>
             <GridPane>
@@ -51,21 +50,14 @@
             </GridPane>
             <ScrollPane prefHeight="475.0" prefWidth="370.0" GridPane.rowIndex="2">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="475.0" prefWidth="370.0" />
+                <AnchorPane fx:id="transformPanel" minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="370.0" />
               </content>
             </ScrollPane>
             <ScrollPane GridPane.rowIndex="1">
               <content>
                 <AnchorPane minWidth="200.0">
                      <children>
-                        <TableView fx:id="table" layoutY="2.0" minHeight="100.0">
-                          <columns>
-                              <TableColumn fx:id="delComlumn" prefWidth="29.0" />
-                            <TableColumn fx:id="nameColumn" minWidth="124.0" prefWidth="124.0" text="Name" />
-                            <TableColumn fx:id="typeColumn" prefWidth="142.0" text="Type" />
-                              <TableColumn fx:id="sizeColumn" prefWidth="267.0" text="Size" />
-                          </columns>
-                        </TableView>
+                        <ListView fx:id="listOfItems" prefHeight="191.0" prefWidth="573.0" />
                      </children>
                   </AnchorPane>
               </content>
